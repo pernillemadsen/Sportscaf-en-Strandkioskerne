@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Bestilling prototype</title>
+    <style>
+        /* Taget fra W3Schools (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form) */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            margin: 1em auto 0 auto;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="order_list">
+        <p class="foodName" id="foodName1" value="Frikadelle Sandwich">Frikadelle sandwich</p>
+        <button onclick="increaseNumber1()" class="plus" type="button">+</button>
+        <button onclick="decreaseNumber1()" class="minus" type="button">-</button>
+        <input type="number" id="myNumber1" value="0" min="0">
+        <br/>
+        <br/>
+        <p class="foodName" id="foodName2" value="Kylling bacon Sandwich">Kylling m. bacon sandwich</p>
+        <button onclick="increaseNumber2()" class="plus" type="button">+</button>
+        <button onclick="decreaseNumber2()" class="minus" type="button">-</button>
+        <input type="number" id="myNumber2" value="0" min="0">
+        <br/>
+        <br/>
+        <p class="foodName" id="foodName3" value="Laksesandwich">Lakse sandwich</p>
+        <button onclick="increaseNumber3()" class="plus" type="button">+</button>
+        <button onclick="decreaseNumber3()" class="minus" type="button">-</button>
+        <input type="number" id="myNumber3" value="0" min="0">
+        <br/>
+        <br/>
+
+        <div id="holder">
+            <div class="btn_order" onclick="orderItems()" data-popup-open="popup-1" href="#">
+                <p class="btnText_order">LÆG I KURV</p>
+                <div class="btnTwo_order">
+                    <p class="btnText2_order">JA TAK!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <form name="orderForm" onsubmit="return validateForm()" method="post">
+                <label for="basket">Bestillingsoversigt</label>
+                <textarea readonly type="text" id="basket" name="købs_Kurv" placeholder="Din bestillingsoversigt"></textarea>
+                <label for="fnavn">Navn</label>
+                <input type="text" id="fnavn" name="fulde_Navn" placeholder="Dit navn..">
+                
+                <label for="mobil_Number">Telefonnummer</label>
+                <br>
+                <input type="number" id="mobil_Number" name="mobil_Nummer" min="0" max="99999999" placeholder="Dit telefonnummer..">
+                <br><br>
+                
+                <label for="date"> Dato & tid</label>
+                <br>
+                <input type="date" id="date" placeholder="dd/mm/yy">
+
+                <input type="time" id="time" placeholder="Tidspunkt">
+                <br>
+
+                <label for="subject"> <br> Kommentarfelt</label>
+                <textarea id="subject" name="kommentar" placeholder="Skriv f.eks. hvis du har tilføjelser til din ordre, eller ønsker at give besked til personalet om noget andet.." style="height:200px"></textarea>
+
+                <input type="submit" value="Bestil">
+            </form>
+        </div>
+
+    </div>
+
+    <div class="order_footer">
+        <footer>
+
+            <div class="popup" data-popup="popup-1">
+                <div class="popup-inner">
+                    <h2>Oversigt</h2>
+                    <p id="confirm">.</p>
+                    <p><a data-popup-close="popup-1" href="#">Luk</a></p>
+                    <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script>
+    function increaseNumber1() {
+        document.getElementById("myNumber1").stepUp(1);
+    }
+
+    function decreaseNumber1() {
+        document.getElementById("myNumber1").stepDown(1);
+
+    }
+
+    function increaseNumber2() {
+        document.getElementById("myNumber2").stepUp(1);
+    }
+
+    function decreaseNumber2() {
+        document.getElementById("myNumber2").stepDown(1);
+
+    }
+
+    function increaseNumber3() {
+        document.getElementById("myNumber3").stepUp(1);
+    }
+
+    function decreaseNumber3() {
+        document.getElementById("myNumber3").stepDown(1);
+    }
+
+    $(function() {
+        //----- OPEN
+        $('[data-popup-open]').on('click', function(e) {
+            var targeted_popup_class = jQuery(this).attr('data-popup-open');
+            $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+            e.preventDefault();
+        });
+        //----- CLOSE
+        $('[data-popup-close]').on('click', function(e) {
+            var targeted_popup_class = jQuery(this).attr('data-popup-close');
+            $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+            e.preventDefault();
+        });
+    });
+
+
+    function orderItems() {
+
+        //Første madvarer
+        var first = document.getElementById("myNumber1").value;
+        var z = document.getElementById("foodName1").getAttribute("value");
+        var firstItem = [first, z];
+        var intX = parseInt(first);
+        if (intX == 0) {
+            firstItem = [];
+        }
+        var firstCon = firstItem.join('x ')
+
+        //Anden madvarer
+        var second = document.getElementById("myNumber2").value;
+        var x = document.getElementById("foodName2").getAttribute("value");
+        var secondItem = [second, x];
+        var intZ = parseInt(second);
+        if (intZ == 0) {
+            secondItem = [];
+        }
+        var secondCon = secondItem.join('x ')
+
+        //Tredje madvarer
+        var third = document.getElementById("myNumber3").value;
+        var y = document.getElementById("foodName3").getAttribute("value");
+        var thirdItem = [third, y];
+        var intY = parseInt(third);
+        if (intY == 0) {
+            thirdItem = [];
+        }
+        var thirdCon = thirdItem.join('x ')
+
+        //Evaluate basket size
+
+        //var currentVal = first.value;
+        var basket = [];
+        basket.push(firstCon, "\n", secondCon, "\n", thirdCon);
+        var basketOrder = basket.join('');
+
+
+        if (intX == 0 && intZ == 0 && intY == 0) {
+            document.getElementById("confirm").innerHTML = "Du har ikke lagt nogle vare i kurven";
+        } else {
+            document.getElementById("confirm").innerHTML = "Du har lagt " + basketOrder + " i kurven";
+            document.getElementById('basket').innerHTML = basketOrder;
+        }
+
+        storageItems();
+    }
+
+    function storageItems() {
+        var item = $('#basket').val();
+        var items = sessionStorage.getItem('myOrder');
+
+        if (items != null) {
+            items = JSON.parse(items);
+        } else {
+            items = new Array();
+        }
+
+        items.push(item);
+
+        sessionStorage.setItem('myOrder', JSON.stringify(items));
+
+        refresh();
+    }
+
+    function refresh() {
+        var items = sessionStorage.getItem('myOrder');
+
+        if (items != null) {
+            items = JSON.parse(items);
+
+            $(items).each(function(index, data) {
+
+                document.getElementById('basket').innerHTML = data;
+            });
+        }
+    }
+
+    $(function() {
+        refresh();
+    });
+
+    function validateForm() {
+        var x = document.forms["orderForm"]["fnavn"].value;
+        var z = document.forms["orderForm"]["mobil_Nummer"].value;
+        if (x == "") {
+            alert("Venligst indtast dit navn");
+            return false;
+        }
+
+        if (z.length < 8 || z.length > 8) {
+            alert("Indtast venligst et gyldigt nummer");
+            return false;
+        }
+        
+        var d = document.forms["orderForm"]["date"].value;
+        if(d == ""){
+            alert("Vælg et tidspunkt");
+            return false;
+        }
+        
+        var t = document.forms["orderForm"]["time"].value;
+        if (t == ""){
+            alert("Angiv et tidspunkt")
+            return false;
+        }
+    }
+</script>
+
+</html>

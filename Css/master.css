@@ -1,0 +1,1207 @@
+@import url('"https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet');
+
+body {
+    /* background-image: url(../img/Background_sport.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(249, 247, 249, 1);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+body p {
+    text-align: justify;
+}
+
+#dots {
+    position: relative;
+    bottom: 50px;
+    margin: 0;
+}
+
+/*font-family: 'Rubik', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+/* NEWSBAR SECTION START */
+
+.tickercontainer {
+    /* the outer div with the black border */
+    /*background: linear-gradient(to bottom right,#BB2926, #BB2926 60%,  #6f1d18);*/
+    background: linear-gradient(#BB2926, #BB2926 60%, #6f1d18);
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.tickercontainer .mask {
+    /* that serves as a mask. so you get a sort of padding both left and right */
+    position: relative;
+    left: 100px;
+    top: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* LIST */
+
+ul.newsticker {
+    position: relative;
+    left: 750px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.newsticker li {
+    float: left;
+    /* important: display inline gives incorrect results when you check for elem's width */
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+ul.newsticker a {
+    white-space: nowrap;
+    padding: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    margin: 0 50px 0 0;
+    text-decoration: none;
+}
+
+ul.newsticker span {
+    margin: 0 10px 0 0;
+}
+
+/* PLACEMENT OF LOGO */
+
+.header {
+    margin-top: 0.5em;
+}
+
+img.logo {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 1px;
+    left: 100px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* NEWSBAR SECTION STOP */
+
+/* TITEL-FOOTER SECTION START */
+
+#overskrift {
+    font-family: 'Rubik', sans-serif;
+    font-size: 72px;
+    text-align: center;
+    color: #3d3d36;
+}
+
+.overskrift {
+    font-family: 'Rubik', sans-serif;
+    font-size: 72px;
+    text-align: center;
+    color: #3d3d36;
+    margin: 0;
+    padding: 25px;
+    z-index: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+    background-color: #BB2926;
+    color: #fff;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    margin: 0 auto 0 auto;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.leftFoot {
+    width: 45%;
+    float: left;
+    padding-left: 10%;
+}
+
+.rightFoot {
+    display: inline-block;
+    padding-left: 10%;
+    width: 45%;
+}
+
+/* TITEL-FOOTER SECTION STOP */
+
+/* STYLE SECTION START*/
+
+/* Naviagtionsbar */
+
+.nav {
+    background-color: #BB2926;
+    color: #ffffff;
+    list-style: none;
+    /* text-align: center; */
+    padding: 1% 0% 1% 0%;
+    font-family: 'Rubik', sans-serif;
+    margin: 0 auto 0 auto;
+    font-size: 20px;
+}
+
+#letterSpacing {
+    letter-spacing: 2px;
+}
+
+.navbar {
+    margin: 0 auto 0 auto;
+}
+
+.streg {
+    float: left;
+    position: relative;
+    padding-top: 4.5px;
+    opacity: 0.4;
+}
+
+
+/* Nav Knapper */
+
+.nav > li {
+    display: inline-block;
+    padding: 0% 1.5% 0% 1.5%;
+}
+
+
+/* Nav Knapper */
+
+.nav > li > a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    letter-spacing: 0.5px;
+}
+
+.nav > li > a:hover {
+    color: #c1c1c1 !important;
+}
+
+
+/* Gule Knapper */
+
+.active {
+    background: linear-gradient(#FFFA64, #F2ED4D);
+    border-radius: 20px;
+    color: black !important;
+    width: 100%;
+    height: 10%;
+}
+
+
+/* SubMenu */
+
+.navsub {
+    background-color: #BB2926;
+    color: #ffffff;
+    list-style: none;
+    text-align: center;
+    padding: 1% 0% 1% 0%;
+    margin-top: -1.4%;
+    width: 100%;
+}
+
+.navsub > li {
+    display: inline-block;
+    padding: 0% 1% 0% 2%;
+}
+
+.navsub > li > a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.submenu {
+    background: #FC4237;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 20px;
+    width: 170px;
+    height: 50%;
+}
+
+
+/* Billeder under submenu */
+
+.row {
+    display: flex;
+    width: 90%;
+    position: relative;
+}
+
+.column {
+    padding: 5px;
+}
+
+#submenu_food {
+    box-sizing: border-box;
+    margin-bottom: 1%;
+}
+
+.container {
+    position: relative;
+}
+
+.image_Menu {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+/* STYLE SECTION STOP */
+
+/* SLIDESHOW SECTION START */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 1% auto 0% auto;
+}
+
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    color: #f2f2f2;
+    /* background-color: rgba(0, 0, 0, 0.2);*/
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0px 2px 0px 0px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* img crop and position */
+
+.crop {
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+}
+
+
+/*top, right, buttom, left*/
+
+.img1 {
+    margin: -10px 0 0 0px;
+}
+
+.img2 {
+    margin: -10px 0 0 0px;
+}
+
+.img3 {
+    margin: -10px 0 0 0px;
+}
+
+/* SLIDESHOW SECTION STOP */
+
+/* KONTAKT SECTION START */
+
+/* div around entire contact element */
+
+.kontakt {
+    display: inline-block;
+    /* places entire div in middle */
+    width: 100%;
+    padding-right: 17.5%;
+    padding-left: 18%;
+    margin-bottom: 1%;
+}
+
+.kontakt span {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.left-contact {
+    width: 47%;
+    float: left;
+}
+
+.right-contact {
+    width: 47%;
+    float: right;
+    padding-bottom: 0.5%;
+}
+
+#fortælling {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 5%;
+}
+
+#contact {
+    width: 80%;
+    height: 80%;
+}
+
+#oplysninger {
+    padding-left: 2%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#oplysninger p {
+    line-height: 150%;
+}
+
+#åbningstider {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 15%;
+    padding-left: 2%;
+}
+
+#åbningstider p {
+    line-height: 150%;
+}
+
+#åbningstiderKiosk {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 30%;
+}
+
+#åbningstiderKiosk p {
+    line-height: 150%;
+}
+
+
+/* KONTAKTFORMULAR START*/
+
+#contact fieldset {
+    border: none;
+}
+
+#contact textarea {
+    height: 30%;
+    width: 100%;
+    padding: 2%;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: #F5ECCE;
+    border: none;
+}
+
+#contact input {
+    width: 100%;
+    height: 6%;
+    padding: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: #F5ECCE;
+    border: none;
+}
+
+#contact button {
+    font: 14px 'Roboto', sans-serif;
+    background: #F5DA81;
+    padding: 1% 2%;
+    color: #585858;
+}
+
+form {
+    margin: 0 0 0 -0.85em;
+}
+
+/* KONTAKTFORMULAR SLUT */
+
+/* BESTILLING SEKTION START */
+
+#facebook {
+    margin: auto;
+    padding: auto;
+    display: inline-block;
+    float: right;
+}
+
+#mobil_Number {
+    width: 20em;
+}
+
+#google_ice {
+    top: 20em;
+    position: relative;
+}
+
+#google_ice_kontakt {
+    margin-top: 1.5em;
+}
+
+.bestilling {
+    position: relative;
+    top: 20em;
+    width: 100%;
+}
+
+.plus {
+    width: 2em;
+    height: 2em;
+    position: relative;
+    float: right;
+    right: 20em;
+    display: inline-block;
+}
+
+.minus {
+    width: 2em;
+    height: 2em;
+    position: relative;
+    float: right;
+    right: 40em;
+    display: inline-block;
+}
+
+#title_b {
+    position: relative;
+    bottom: 8em;
+    margin: auto;
+    text-align: center;
+    color: darkred;
+    font-size: 40px;
+    background-color: orangered;
+    width: 100%;
+}
+
+#myNumber1 {
+    float: right;
+    position: relative;
+    right: 22em;
+    display: inline-block;
+}
+
+#myNumber2 {
+    float: right;
+    position: relative;
+    right: 22em;
+    display: inline-block;
+}
+
+#myNumber3 {
+    float: right;
+    position: relative;
+    right: 22em;
+    display: inline-block;
+}
+
+.foodName {
+    box-sizing: content-box;
+    position: relative;
+    left: 5em;
+    display: inline;
+    font-size: 20px;
+    bottom: 1px;
+}
+
+
+/* PROTOTYPE START */
+
+/* Outer */
+
+.popup {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* Inner */
+
+.popup-inner {
+    max-width: 700px;
+    width: 90%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+    border-radius: 3px;
+    background: #fff;
+}
+
+
+/* Close Button */
+
+.popup-close {
+    width: 30px;
+    height: 30px;
+    padding-top: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transition: ease 0.25s all;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    border-radius: 1000px;
+    background: rgba(0, 0, 0, 0.8);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100%;
+    color: #fff;
+}
+
+.popup-close:hover {
+    -webkit-transform: translate(50%, -50%) rotate(180deg);
+    transform: translate(50%, -50%) rotate(180deg);
+    background: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+#holder {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    background: white;
+    padding: 10px;
+    width: 250px;
+    margin: 2em auto;
+    position: relative;
+    top: 4.5em;
+    transform: translateY(-65%);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+
+.btn_order {
+    background: #3D4C53;
+    margin: 20px auto;
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+    transition: .2s;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+}
+
+.btnTwo_order {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin-top: -100px;
+    padding-top: 2px;
+    background: #26A69A;
+    left: -250px;
+    transition: .3s;
+}
+
+.btnText_order {
+    color: white;
+    transition: .3s;
+    text-align: center;
+}
+
+.btnText2_order {
+    margin-top: 63px;
+    margin-right: -130px;
+    color: #FFF;
+    text-align: center;
+}
+
+.btn_order:hover .btnTwo_order {
+    /*When hovering over .button change .btnTwo*/
+    left: -130px;
+}
+
+.btn_order:hover .btnText_order {
+    /*When hovering over .button change .btnText*/
+    margin-left: 65px;
+}
+
+.btn_order:active {
+    /*Clicked and held*/
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+#order_list {
+    background-image: url(../img/Sandwich.png);
+    padding: 5em;
+    margin: 0 auto 0 auto
+}
+
+/* BESTILLING SEKTION STOP */
+
+/* VIDEO_SPORTS SEKTION START */
+
+.video_container iframe {
+    margin: 1% 0 0 0
+}
+
+/* VIDEO_SPORTS SEKTION STOP */
+
+/* IDRÆTSCENTERET SEKTION START */
+
+.idrætscenteret {
+    font-family: 'Roboto';
+    padding-left: 17%;
+    width: 100%;
+    margin: auto;
+}
+
+h3 {
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+}
+
+span {
+    font-weight: bold;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+/*img*/
+
+.popupMap {
+    width: 100%;
+    margin: auto;
+}
+
+.popupMap img {
+    width: 500px;
+    height: 300px;
+    padding-bottom: 5%;
+    cursor: pointer
+}
+
+.showMap {
+    z-index: 999;
+    display: none;
+}
+
+.showMap .overlayMap {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .66);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.showMap .img-showMap {
+    width: 800px;
+    height: 400px;
+    background: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden
+}
+
+.img-showMap span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.img-showMap img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*two column*/
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 40%;
+    margin-right: 4.5%;
+}
+
+.right {
+    width: 49%;
+    float: right;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#nyheder {
+    position: relative;
+    top: -25px;
+    width: 100;
+    margin-left: 15.6em;
+}
+
+/* IDRÆTSCENTERET SEKTION STOP */
+
+/* NYHEDER START */
+
+#nyheder {
+    width: 80%;
+}
+
+#nyhederKiosk {
+    position: relative;
+    top: -25px;
+    width: 80%;
+    margin-left: 16.8em;
+}
+
+#nyhederKiosk .nyhed-billed {
+    width: 100%;
+    cursor: pointer;
+}
+
+#nyheder .nyhed-billed {
+    width: 100%;
+    cursor: pointer;
+}
+
+#nyheder h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+}
+
+#content .nyhed_dato {
+    color: gray;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 5%;
+}
+
+#content .nyhed-skrift {
+    font-family: 'Roboto', sans-serif;
+    margin-right: 5%;
+}
+
+#content .nyhed_seperator {
+    margin-top: 4%;
+    border-bottom: 1px solid;
+}
+
+#content .nyhed-energidrik {
+    font-family: 'Roboto', sans-serif;
+    margin-right: 5%;
+    padding-bottom: 2%;
+}
+
+#content.nyhed-billed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* NYHEDER SLUT */
+
+/*ARRANGEMENTER */
+
+.arrangementer_div {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    display: inline-block;
+    padding-left: 17.5%;
+    padding-top: 3%;
+    width: 100%;
+}
+
+.arrangementer_div h2 {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.left_Arrangementer {
+    position: relative;
+    width: 40%;
+    line-height: 160%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.right_Arrangementer {
+    width: 45%;
+    padding-left: 3%;
+}
+
+#arrangementer_seperator {
+    margin-top: 4%;
+    border-bottom: 1px solid;
+}
+
+
+/*POPUP IMG ARRANGEMENTER START*/
+
+.popupMap_arrangementer {
+    width: 45%;
+    cursor: pointer;
+}
+
+.showMap_arrangementer {
+    z-index: 999;
+    display: none;
+}
+
+.showMap_arrangementer .overlayMap_arrangementer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .66);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.showMap_arrangementer .img-showMap_arrangementer {
+    width: 600px;
+    height: 800px;
+    background: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden
+}
+
+.img-showMap_arrangementer span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.img-showMap_arrangementer img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*POPUP IMG ARRANGEMENTER SLUT*/
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button_arrangementer {
+    background: #FFFF;
+    border: none;
+    border-radius: 14px;
+    padding: 5px 30px 5px 30px;
+    top: 4.5em;
+    left: 80%;
+    text-decoration: none;
+    color: #000000;
+    background: #e0da69;
+    margin-left: 80%;
+}
+
+.button_arrangementer:hover {
+    background: #ccaf64;
+    text-decoration: none;
+}
+
+/* ARRANGEMENTER SLUT */
+
+/* NAVBAR START */
+
+#main_nav_menu {
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    letter-spacing: 2px;
+}
+
+#main_nav_order {
+    letter-spacing: 2px;
+}
+
+#main_nav_events {
+    letter-spacing: 2px;
+}
+
+#main_nav_sports {
+    letter-spacing: 2px;
+}
+
+#main_nav_contact {
+    letter-spacing: 2px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.inactive {
+    background: linear-gradient(#FFFA64, #F2ED4D);
+    border-radius: 20px;
+    color: black !important;
+    width: 100%;
+    height: 10%;
+    opacity: 0.5;
+}
+
+
+/* CANVAS SEKTION START */
+
+#canvas {
+    margin: 1% 3% 1% 5%;
+}
+
+.container {
+    opacity: 0.9;
+}
+
+
+/* SOCIAL MEDIA START */
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2% 2px;
+}
+
+.faKiosk {
+    margin: 3% 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    float: right;
+    margin-right: 5%;
+}
+
+/* SOCIAL MEDIA STOP */
+
+.here {
+    background-color: rgba(245, 245, 220, 0.8);
+    color: black;
+    float: right;
+    list-style-type: none;
+    font-family: inherit;
+    transform: rotate(-30deg);
+    letter-spacing: 1.5px;
+    position: relative;
+    border-radius: 20px;
+    text-align: left;
+}
+
+#herekiosk {
+    bottom: 50px;
+    right: 110px;
+}
+
+#herecafe {
+    bottom: 50px;
+    right: 90px;
+}
+
+#strandkiosk_tilbud {
+    margin: 0 auto 10px auto;
+}

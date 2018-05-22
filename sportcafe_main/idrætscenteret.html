@@ -1,0 +1,73 @@
+<html>
+<head>
+
+    <link href="css/master.css" rel="stylesheet" />
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        document.title = "Sportscenter";
+    </script>
+</head>
+
+<body>
+
+    <div class="idrætscenteret">
+        <div class="row">
+            <div class="column left">
+                <h3>Solrød Idrætscenter</h3>
+
+
+                <p>
+                    Solrød Idrætscenter benyttes af foreninger, skoler, gymnasium, institutioner i Solrød Kommune til trænings- og konkurrenceaktiviteter. Ud over de idrætslige aktiviteter, ligger Idrætscenteret også lokaler til ved en række kulturelle aktiviteter, møder, festarrangementer og udstillinger. Idrætscenteret indeholder en svømmehal, en opvisningshal, to træningshaller, to træningssale, motionsrum og mødelokaler. Idrætscenteret bindes sammen af en stor foyer, der rummer en Café med plads til 60 personer. På Solrød Idrætscenter er også udendørs anlæg med boldbaner og tennisbaner. Der er følgende baner i Solrød Idrætscenter:
+                    <ul>
+                        <li>En 11 mands opvisningsbane</li>
+                        <li>Tre 11-mands træningsbaner der i hverdagen opdeles i 9-mands og 7-mands baner</li>
+                        <li>Tre podebaner</li>
+                        <li>Kunstgræs anlæg</li>
+
+                    </ul>
+                </p>
+            </div>
+            <div class="column right">
+                <div class="svømmehal">
+                    <h3>Svømmehallens åbningstider</h3>
+                    <p><span>Mandag-torsdag:</span> 9-21 <span>Fredag-søndag:</span> 10-23</p>
+
+
+                    <!-- <a target="_blank" href="img/COOKIES-LYS.jpg">
+    <img class = "map" src="img/COOKIES-LYS.jpg">-->
+
+                    <div class="popupMap">
+                        <img src="../img/idr%C3%A6tscenter_kort.JPG.png">
+                    </div>
+                    <div class="showMap">
+                        <div class="overlayMap"></div>
+                        <div class="img-showMap">
+                            <span>X</span>
+                            <img src="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            "use strict";
+
+            $(".popupMap img").click(function() {
+                var $src = $(this).attr("src");
+                $(".showMap").fadeIn();
+                $(".img-showMap img").attr("src", $src);
+            });
+
+            $("span, .overlay").click(function() {
+                $(".showMap").fadeOut();
+            });
+
+        });
+    </script>
+</body>
+</html>

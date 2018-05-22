@@ -1,0 +1,93 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+<div class="arrangementer_div">
+   <div class="row">
+       
+        <div class="left_Arrangementer">
+       
+    <h2 >Tilbud</h2>
+     
+     <p>Vil du planlægge et arrangement lidt ud over det sædvanlige? <br>Så er du kommet til den rette side! I Solrød Idrætscenter kan du holde ethvert arrangement - det eneste du skal gøre er at give os et kald på 31 54 18 16, så finder hjælper vi med at gøre arrangementet til noget helt særligt!</p>  
+            
+            <div class="popupMap_arrangementer">
+                <img src="../img/Tilbud-b%C3%B8rnef%C3%B8dselsdag.jpg" style="width: 160%;margin-left: 30%;">
+            </div>
+        </div>     
+             
+       <div class="showMap_arrangementer">
+            <div class="overlayMap_arrangementer"></div>
+            <div class="img-showMap_arrangementer">
+                <span>X</span>
+                <img src="">
+            </div>
+        </div> 
+      
+        <div class="right_Arrangementer">
+           
+            
+    <div class="billet køb">
+      
+       <h2 >Køb billet </h2>
+        
+        <p><b>03. juni 2018</b> <br> Svømmestævne, Hørsholm Svømmeforening<br></p> <p> <font size="2">Den 03. juni afholder Hørsholm Svømmeforenings yngste konkurrencesvømmere sæsonens sidste E47 stævne i Solrød Svømmehal. En god optakt til det kommende Spar Nord Hørsholm Cup stævne, der finder sted i næste weekend. </font></p>
+        
+        <div class="arrangementerKnap">
+            <a href="http://www.lokalbilletten.dk" class="button_arrangementer" target="_blank">Køb</a> 
+        </div>
+        
+        <div id="arrangementer_seperator"></div>
+        
+        <p><b>13. juli 2018</b> <br> Badminton, Næsby Idrætsforening<br></p> <p> <font size="2">Den 13. juli afholder Næsby Idrætsforening sæsonens sidste CUP i Solrød Idrætscenter. Mød op til en spændende kamp, og oplev Næsby Idrætsforenings helt egne spillere! </font></p>
+        
+        <div class="arrangementerKnap">
+            <a href="http://www.lokalbilletten.dk" class="button_arrangementer" target="_blank">Køb</a> 
+        </div>
+        
+        <div id="arrangementer_seperator"></div>
+        
+        <p><b>25. august 2018</b> <br> Bordtennis, Solrød Bordtennisklub<br></p> <p> <font size="2">Tag med når Solrød Bordtennisklub d. 25. august afholder et af deres årlige stævner! Her kan du både få unikke oplevelser indenfor sporten, samtidig med at du bliver bedre! </font></p>
+        
+        <div class="arrangementerKnap">
+            <a href="http://www.lokalbilletten.dk" class="button_arrangementer" target="_blank">Køb</a> 
+        </div>
+        
+        <div id="arrangementer_seperator"></div>
+            
+    </div>
+      
+   
+       
+</div>
+</div>
+
+</div>
+    
+ 
+</body>
+     <script>
+            $(function() {
+                "use strict";
+
+                $(".popupMap_arrangementer img").click(function() {
+                    var $src = $(this).attr("src");
+                    $(".showMap_arrangementer").fadeIn();
+                    $(".img-showMap_arrangementer img").attr("src", $src);
+                });
+
+                $("span, .overlay_arrangementer").click(function() {
+                    $(".showMap_arrangementer").fadeOut();
+                });
+
+            });
+        </script>
+</html>
